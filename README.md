@@ -102,6 +102,28 @@ pytest -q
 ```
 
 ---
+## ✅ Example
+from propfill import ProportionalImputer
+import pandas as pd
+import numpy as np
+
+# Example dataset with missing values
+df = pd.DataFrame({
+    "category": ["A", "B", "C", "A", "B", np.nan, np.nan, np.nan, "C", "A",
+                 np.nan, "B", "C", np.nan, "A", "B", np.nan, "C", "A", "B"]
+})
+
+# Make a copy so we can keep the original column
+df_copy = df.copy()
+
+# Apply ProportionalImputer
+imp = ProportionalImputer()
+df_copy["category_imputed"] = imp.fit_transform(df)["category"]
+
+# Show comparison
+print(df_copy.head(20))
+
+---
 
 ## 📜 License
 
