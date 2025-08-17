@@ -21,3 +21,7 @@ dev = ["pytest>=7", "ruff>=0.4", "black>=24.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/SachinSingh008/sklearn-propfill"
+Issues = "https://github.com/SachinSingh008/sklearn-propfill/issues"
