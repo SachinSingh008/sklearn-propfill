@@ -103,6 +103,7 @@ pytest -q
 
 ---
 ## ✅ Example
+```bash
 from propfill import ProportionalImputer
 import pandas as pd
 import numpy as np
@@ -122,6 +123,7 @@ df_copy["category_imputed"] = imp.fit_transform(df)["category"]
 
 # Show comparison
 print(df_copy.head(20))
+```
 
 ---
 
